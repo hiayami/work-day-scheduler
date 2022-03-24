@@ -7,7 +7,7 @@ let currentHour = currentTime.substr(11,2);
 // let currentHour = 11;
 console.log (currentHour);
 
-document.querySelectorAll(".list-group-item-primary").forEach((element, idx) => {
+document.querySelectorAll("textarea").forEach((element, idx) => {
     console.log(9+ idx, currentHour);
     if (9 + idx == currentHour) {
         element.style.backgroundColor="red"
@@ -16,4 +16,14 @@ document.querySelectorAll(".list-group-item-primary").forEach((element, idx) => 
     } else {element.style.backgroundColor="green"}
 });
 
-// $("list-group-item-primary").css("background-color", "gray");
+
+function saveTextArea(e) {
+    console.log(e, this);
+    const hour = e.target.dataset.hour
+    const content = document.querySelectorAll(`textarea[data-hour="${hour}"]`).value;
+    console.log (content);
+    localStorage.setItem("data", content);
+}
+document.querySelectorAll(`textarea[data-hour="17"]`).value=localStorage.getItem("data");
+console.log("data");
+// $("list-group-item-primary").css("background-color", "gray");ß
