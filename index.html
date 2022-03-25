@@ -18,7 +18,7 @@
   <header class="jumbotron custom-jumbotron">
     <h1 class="display-4">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
+    <p class="lead">Today's Date is <span id="currentDay"></span></p>
   </header>
   <div class="container">
     <!--Timeblocks go here -->
@@ -27,11 +27,13 @@
         9am
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="9" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
 
       </div>
       <div class="col col-1">
-        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="9">
+          <i class="fa-user"></i>
+        </button>
       </div>
 
     </div>
@@ -40,11 +42,11 @@
         10am
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="10" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
 
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="10">save</button>
       </div>
 
     </div>
@@ -54,11 +56,11 @@
         11am
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="11" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
 
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="11">save</button>
       </div>
 
     </div>
@@ -68,11 +70,11 @@
         12pm
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="12" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
 
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="12">save</button>
       </div>
 
     </div>
@@ -82,12 +84,12 @@
         1pm
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="13" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
         
 
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="13">save</button>
       </div>
 
     </div>
@@ -97,11 +99,11 @@
         2pm
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="14" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
         
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="14">save</button>
       </div>
 
     </div>
@@ -111,11 +113,11 @@
         3pm
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="15" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
       
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="15">save</button>
       </div>
 
     </div>
@@ -125,11 +127,11 @@
         4pm
       </div>
       <div class="col-8">
-        <textarea href="#" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
+        <textarea href="#" data-hour="16" class="list-group-item list-group-item-action list-group-item-primary"></textarea>
         
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="16">save</button>
       </div>
 
     </div>
@@ -143,7 +145,7 @@
        
       </div>
       <div class="col col-1">
-        <button onclick="saveTextArea(event)" data-hour="17">save folder</button>
+        <button class="saveBtn" onclick="saveTextArea(event)" data-hour="17">save</button>
       </div>
 
     </div>
