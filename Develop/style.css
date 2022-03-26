@@ -3,6 +3,10 @@ body {
     font-size: 16px;
     line-height: 1;
   }
+
+  i {
+    pointer-events: none;
+  }
   
   textarea {
     background: transparent;
