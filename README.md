@@ -18,3 +18,4 @@ Added buttons for user to click and save event from the timeblock, did this by a
 Used a map data structure to display events in each timeblock.
 localStorage.setItem to save the events from each timeblock.
 After saving to local storage, when the page reloads created a document.querySelectorAll for all the text area elements (timeblocks) to display the content that was saved from the map data structure.
+![Work Day Scheduler](https://user-images.githubusercontent.com/98536530/160259715-b3a29362-643e-407d-82e4-0d9e688db581.png)
