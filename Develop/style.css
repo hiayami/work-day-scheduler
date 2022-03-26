@@ -66,7 +66,7 @@ body {
     height: 100%;
   }
   
-  .saveBtn i:hover {
+  .saveBtn:hover i {
     font-size: 20px;
     transition: all 0.15s ease-in-out;
   }
