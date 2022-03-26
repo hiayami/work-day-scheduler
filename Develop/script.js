@@ -8,16 +8,16 @@ document.querySelector('#currentDay').innerText=currentDate
 //momentjs for current time
 var currentTime = moment().format();
 let currentHour = currentTime.substr(11,2);
-// let currentHour = 11;
 console.log (currentHour);
 
+//go through each time block element, and choose a color according to the time (if it's past, present, or future compared to current time, assign a color)
 document.querySelectorAll("textarea").forEach((element, idx) => {
     console.log(9+ idx, currentHour);
     if (9 + idx == currentHour) {
-        element.style.backgroundColor="red"
+        element.style.backgroundColor="#ff6961"
     } else if (9 + idx < currentHour) {
-        element.style.backgroundColor="grey"
-    } else {element.style.backgroundColor="green"}
+        element.style.backgroundColor="#d3d3d3"
+    } else {element.style.backgroundColor="#77dd77"}
 });
 
 //get user entry, and if there is no entry, create an empty one. JSON to wrap all the information from user and to keep it in local storage.
