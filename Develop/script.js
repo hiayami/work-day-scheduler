@@ -10,7 +10,7 @@ var currentTime = moment().format();
 let currentHour = currentTime.substr(11,2);
 console.log (currentHour);
 
-//go through each time block element, and choose a color according to the time (if it's past, present, or future compared to current time, assign a color)
+//go through each time block element, and chooses a color according to the current time (if it's past, present, or future compared to current time, assign a color)
 document.querySelectorAll("textarea").forEach((element, idx) => {
     console.log(9+ idx, currentHour);
     if (9 + idx == currentHour) {
@@ -25,11 +25,14 @@ const data= JSON.parse(localStorage.getItem("data")) || {}
 
 //when user hits "save button"...
 function saveTextArea(event) {
+    //get the data-hour value
     const hour = event.target.dataset.hour
+    //get the text value (content) the user typed and turn it into a string
     const content = document.querySelector(`textarea[data-hour="${hour}"]`).value;
     console.log (content);
-    //it saves the content for each hour..
+    //data structure; able to view text area content (hour is the key, returns user input from text field as the value)
     data[hour]=content;
+    //it saves the content for each hour..
     localStorage.setItem("data", JSON.stringify(data));
 }
 //then when the page reloads, all the info from every hour saved is presented in the text field
